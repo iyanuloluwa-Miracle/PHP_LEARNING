@@ -1,48 +1,5 @@
 <?php
 $output = null;
-
-
-// Get year
-$output = date('Y');
-
-// Get year with timestamp
-$output = date('Y', 936345600 );
-
-// Get timestamp from strtotime
-$output = date('Y', strtotime('1999-09-01'));
-
-
-// Get month
-$output = date('m');
-
-// Get day
-$output = date('D');
-$output = date('l');
-
-// Get month, day and year
-
-$output = date('Y-m-d');
-$output = date('m-d-Y');
-
-// Get hour
-$output = date('h');
-
-// Get min
-
-$output = date('i');
-
-//Get second
-
-$output = date('s');
-
-
-// Get am/pm
-
-$output = date('a');
-
-//Put it all together
-$output = date('Y-m-d h:i:s a')
-
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +21,8 @@ $output = date('Y-m-d h:i:s a')
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6 mt-6">
             <!-- Output -->
-            <p class="text-xl"><?php echo $output; ?></p>
+            <p class="text-xl"><?= $output ?></p>
+            </p>
         </div>
     </div>
 </body>
