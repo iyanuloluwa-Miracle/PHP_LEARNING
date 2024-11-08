@@ -48,6 +48,10 @@ $output = 'Sum of IDs ' . array_sum($ids);
 // array_search
 $output = 'User 2 is at index' . array_search('user2', $users);
 
+//explode
+
+// $tags = 'tech, code, programming';
+// $tagsArr = explode(',');
 
 
 ?>
