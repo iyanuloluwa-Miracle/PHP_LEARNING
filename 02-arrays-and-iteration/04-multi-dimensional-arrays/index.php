@@ -1,5 +1,37 @@
 <?php
 $output = null;
+
+$fruits = [
+  ['Apple', 'Red'],
+  ['Orange', 'Blue'],
+  ['Green', 'Purple'],
+];
+
+$output = $fruits[0][0] . ' - ' . $fruits[0][1];
+
+
+$fruits[]= ['Grape', 'Purple'];
+
+$users = [
+  ['name' => 'John', 'email'=> 'john@gmail.com', 'password' => '123456'],
+  ['name' => 'Mary', 'email' => 'mary@gmail.com', 'password' => '123456'],
+  ['name' => 'Ken', 'email' => 'Ken@gmail.com', 'password' => '123456'],
+
+];
+
+
+$users[]=  ['name' => 'Mike', 'email' => 'mike@gmail.com', 'password' => '123456'];
+
+array_push($users, ['name' => 'Larry', 'email' => 'larry@gmail.com', 'password' => '123456']);
+array_pop($users);
+array_shift($users);
+
+unset($users[0]);
+
+
+
+
+$output = $users[1]['email'];
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +54,9 @@ $output = null;
     <div class="bg-white rounded-lg shadow-md p-6 mt-6">
       <!-- Output -->
       <p class="text-xl"><?= $output ?></p>
+      <pre>
+        <?php print_r($users) ?>
+      </pre>
     </div>
   </div>
 </body>
