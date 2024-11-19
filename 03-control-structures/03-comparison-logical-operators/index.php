@@ -27,3 +27,26 @@
 | xor      | True if one is true    |
 | !        | True if it is not true |
 */
+
+$x = 10;
+$y = '10';
+
+// var_dump($x === $y );
+// var_dump($x === $y);
+
+
+//var_dump($x !== $y);
+//var_dump($x > $y);
+//var_dump($x > $y);
+//var_dump($x > $y);
+
+$a = 5;
+$b = 21;
+
+//var_dump($a == 10 && $b == 20);
+//var_dump($a == 10 and $b == 20);
+//var_dump($a ==10 || $b == 20);
+//var_dump($a ==10 or $b == 20);
+//var_dump($a ==10 xor $b == 20);
+
+var_dump(!($a ==5)); 
