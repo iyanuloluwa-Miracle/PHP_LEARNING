@@ -10,7 +10,7 @@ if( $score > 40){
 
 
 
-echo $score > 40 ? 'High Score' : 'Low Score';
+$result = $score > 40 ? 'High Score' : 'Low Score';
 
 
 echo $result;

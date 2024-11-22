@@ -74,15 +74,15 @@ $listings = [
               </li>
               <li class="mb-2">
                 <strong>Location:</strong> <?= $job['location'] ?>
-                <?php if ($job['location'] === 'New York') : ?>
-                  <span class="text-xs text-white bg-blue-500 rounded-full px-2 py-1 ml-2">Local</span>
-                <?php endif; ?>
+
+
+                <?= $job['location'] === 'New York' ? '<span class="text-xs text-white bg-blue-500 rounded-full px-2 py-1 ml-2"> Local </span>' : '' ?>
               </li>
               <?php if (!empty($job['tags'])) : ?>
                 <li class="mb-2">
                   <strong>Tags:</strong> <?= implode(', ', $job['tags']) ?>
                 </li>
-              <?php endif; ?>
+              <?php endif; ?> 
             </ul>
           </div>
         </div>
