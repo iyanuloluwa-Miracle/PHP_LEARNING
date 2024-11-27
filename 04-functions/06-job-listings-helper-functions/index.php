@@ -6,7 +6,7 @@ $listings = [
     'description' => 'We are seeking a skilled software engineer to develop high-quality software solutions.',
     'salary' => 80000,
     'location' => 'San Francisco',
-    'tags' => ['Software Development', 'Java', 'Python']
+    'tags' => ['Software Development', 'Java', 'Python', 'SEO']
   ],
   [
     'id' => 2,
@@ -41,6 +41,25 @@ $listings = [
     'tags' => []
   ],
 ];
+
+
+
+
+
+
+function formatSalary($salary){
+  return '$' . number_format($salary);
+}
+
+
+function highlightTags($tags, $searchTerm) {
+  $tagsStr = implode(',' , $tags);
+
+
+  return str_replace($searchTerm, "<span class='bg-yellow-200'>{$searchTerm}</span>", $tagsStr);
+
+
+}
 ?>
 
 
@@ -77,8 +96,8 @@ $listings = [
                 <span class="text-xs text-white <?= $job['location'] === 'New York' ? 'bg-blue-500' : 'bg-green-500'; ?> rounded-full px-2 py-1 ml-2"><?= $job['location'] === 'New York' ? 'Local' : 'Remote'; ?></span>
               </li>
               <?php if (!empty($job['tags'])) : ?>
-                <li class="mb-2">
-                  <strong>Tags:</strong> <?= implode(', ', $job['tags']) ?>
+                '< class="mb-2">
+                  <strong>Tags:</strong>' . highlightTags($job['tags'], 'SEO') . '<li></li>'?>
                 </li>
               <?php endif; ?>
             </ul>
